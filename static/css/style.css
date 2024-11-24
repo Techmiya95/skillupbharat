@@ -445,44 +445,107 @@ body {
   #CATEGORY
 \*-----------------------------------*/
 
-.category .section-subtitle { color: var(--radical-red); }
-
-.category .section-title { --color: var(--kappel); }
-
-.category .section-text { margin-block-end: 40px; }
-
-.category-card {
-  padding: 50px 30px;
+#feature{
+  width: 100%;
+  padding: 70px 0;
+}
+.welcome{
   text-align: center;
-  border-radius: var(--radius-5);
-}
+  padding-bottom: 70px;
 
-.category-card .card-icon {
-  background-color: hsla(var(--color), 0.1);
-  width: 80px;
-  height: 80px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  margin-inline: auto;
-  margin-block-end: 30px;
 }
-
-.category-card .card-text {
-  color: var(--eerie-black-1);
-  font-size: var(--fs-5);
-  margin-block: 15px 25px;
+.welcome p{
+  margin: auto;
+  font-size: 90px;
+  color: #0b54f1cf;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
 }
-
-.category-card .card-badge {
-  background-color: hsla(var(--color), 0.1);
-  color: hsl(var(--color));
-  font-size: var(--fs-5);
-  font-weight: var(--fw-500);
-  padding: 2px 18px;
-  max-width: max-content;
-  margin-inline: auto;
-  border-radius: var(--radius-5);
+.welcome p::after{
+  content: '';
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(#112c66,#fff);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.welcome h1{
+  font-size: 70px;
+}
+.service-box{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+.single-service{
+  flex-basis: 30%;
+  text-align: center;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  color: #100101;
+  position: relative;
+  box-sizing: border-box;
+}
+.single-service img{
+  width: 100%;
+  height: 350px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the area */
+  border-radius: 15px;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.5),#112c66);
+  opacity: 0;
+  transition: 1s;
+}
+.single-service:hover .overlay{
+  opacity: 1;
+}
+.service-desc{
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 1s;
+}
+hr{
+  background: #fff;
+  height: 2px;
+  border: 0;
+  margin: 15px auto;
+  width: 60%;
+}
+.single-service:hover .service-desc{
+  bottom: 40%;
+  opacity: 1;
+}
+@media screen and (max-width: 770px){
+  .single-service{
+      flex-basis: 100%;
+      margin-bottom: 30px;
+  }
+  .hr{
+      margin: 5px auto;
+  }
+  .single-service:hover .service-desc{
+      bottom: 25% !important;
+  }
 }
 
 
@@ -499,7 +562,7 @@ body {
 
 .about .container {
   display: grid;
-  gap: 30px;
+  gap: 50px;
 }
 
 .about-banner {
@@ -541,7 +604,7 @@ body {
 
 .about-item ion-icon {
   color: var(--selective-yellow);
-  font-size: 20px;
+  font-size: 0px;
   --ionicon-stroke-width: 50px;
 }
 
@@ -742,52 +805,74 @@ body {
 
 /* Partner */
 
+/* General styling */
 .partner-logos {
-  text-align: center;
-  margin: 50px 0;
+  background: #f9f9f9;
+  padding: 20px 0;
+  overflow: hidden; /* Ensures no overflow outside the container */
 }
 
 .section-title {
+  text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Slider container */
 .slider {
-  overflow: hidden;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Prevents logos from being visible outside the slider */
   white-space: nowrap;
 }
 
-/* Track of the slider */
 .slide-track {
   display: flex;
-  width: calc(250px * 14); /* Adjust according to how many logos you have (250px width) */
-  animation: scroll 30s linear infinite;
+  animation: scroll 20s linear infinite; /* Animates the sliding effect */
 }
 
-/* Individual slides */
 .slide {
-  width: 250px; /* Set the width for each logo */
-  padding: 10px;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 150px; /* Adjust size as per your requirement */
+  margin: 0 10px; /* Space between logos */
+  transition: transform 0.3s ease-in-out;
 }
 
 .slide img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  display: block;
 }
 
-/* Scroll animation */
+/* Keyframes for smooth scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-100%); /* End position, moves left */
+  }
+}
+
+/* Duplicate content to create a seamless loop */
+.slide-track::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+
 @keyframes scroll {
   0% {
       transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+      transform: translateX(calc(-250px * 12)); /* Total width of one loop */
   }
 }
+
 
 /* Mobile responsiveness */
 @media only screen and (max-width: 768px) {
