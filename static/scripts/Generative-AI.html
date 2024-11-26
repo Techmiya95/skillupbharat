@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .modules {
+            margin: 20px 0;
+        }
+
+        .modules h2 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .modules ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modules li {
+            font-size: 1.1em;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #download-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #download-btn:hover {
+            background: #0056b3;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generative AI Course</h1>
+            <p>Skillup Bharat's Generative AI course explores AI-driven content creation.</p>
+        </header>
+        <section class="modules">
+            <h2>Course Modules</h2>
+            <ul>
+                <li>Foundations of AI and Machine Learning</li>
+                <li>Introduction to Generative Models</li>
+                <li>Data Handling and Preprocessing</li>
+                <li>Generative AI for NLP</li>
+                <li>Generative AI for Images</li>
+                <li>Advanced Generative Techniques</li>
+                <li>Generative AI in Real-World Applications</li>
+                <li>Ethics, Bias, and Responsible AI</li>
+                <li>Capstone Project and Deployment</li>
+            </ul>
+        </section>
+        <section class="download-section">
+            <button id="download-btn">Download PDF</button>
+            <p id="status"></p>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function () {
+            const pdfUrl = "/static/images/generativeai.pdf"; // Replace with your actual PDF file path
+
+            if (pdfUrl) {
+                const link = document.createElement("a");
+                link.href = pdfUrl;
+                link.download = "generativeai.pdf"; // File name for the download
+                link.click();
+            } else {
+                const status = document.getElementById("status");
+                status.textContent = "PDF not available. Please find the course modules above.";
+                status.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

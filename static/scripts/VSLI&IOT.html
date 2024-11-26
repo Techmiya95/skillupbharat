@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSI & IOT Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .modules {
+            margin: 20px 0;
+        }
+
+        .modules h2 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .modules ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modules li {
+            font-size: 1.1em;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #download-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #download-btn:hover {
+            background: #0056b3;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VLSI & IOT Course</h1>
+            <p>Master the Future: Design Smart Chips and Intelligent IoT Systems!.</p>
+        </header>
+        <section class="modules">
+            <h2>Course Modules</h2>
+            <ul>
+                <li>Module 01: Introduction to VLSI and IoT</li>
+                <li>Module 02: CMOS Technology Basics and Fabrication</li>
+                <li>Module 03: Embedded Systems Basics for IoT</li>
+                <li>Module 04: Digital Design and Microcontroller Programming</li>
+                <li>Module 05: HDL Programming (Verilog/VHDL) for Digital Design</li>
+                <li>Module 06: Microcontroller Architecture (ARM/AVR/ESP)</li>
+                <li>Module 07: Embedded C Programming for IoT Devices</li>
+                <li>Module 08: VLSI Design Tools and FPGA Implementation</li>
+                <li>Module 09: Verilog/VHDL Programming for FPGA</li>
+                <li>Module 10: Implementing Digital Circuits on FPGA</li>
+                <li>Module 11: IoT Communication and Cloud Integration</li>
+                <li>Module 12: Cloud Platforms for IoT</li>
+                <li>Module 13: Data Communication and Device Management in IoT</li>
+                <li>Module 14: Analog VLSI Design and IoT Security</li>
+                <li>Module 15: Implementing Security in IoT Devices and Data Transmission</li>
+                <li>Module 16: Security Challenges in IoT Networks</li>
+                <li>Module 17: VLSI Capstone Project</li>
+                <li>Module 18: IoT Capstone Project</li>
+            </ul>
+        </section>
+        <section class="download-section">
+            <button id="download-btn">Download PDF</button>
+            <p id="status"></p>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function () {
+            const pdfUrl = "/static/images/vlsi&iot.pdf"; // Replace with your actual PDF file path
+
+            if (pdfUrl) {
+                const link = document.createElement("a");
+                link.href = pdfUrl;
+                link.download = "vlsii&iot.pdf"; // File name for the download
+                link.click();
+            } else {
+                const status = document.getElementById("status");
+                status.textContent = "PDF not available. Please find the course modules above.";
+                status.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

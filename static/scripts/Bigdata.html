@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Data Analytics Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .modules {
+            margin: 20px 0;
+        }
+
+        .modules h2 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .modules ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modules li {
+            font-size: 1.1em;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #download-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #download-btn:hover {
+            background: #0056b3;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Big Data Analytics Course</h1>
+            <p>Unlock the Power of Data: Master Big Data Analytics for a Future-Ready Career!</p>
+        </header>
+        <section class="modules">
+            <h2>Course Modules</h2>
+            <ul>
+                <li>Module 1: Fundamentals of Big Data</li>
+                <li>Module 2: Data Storage and Processing</li>
+                <li>Module 3: Hadoop Programming</li>
+                <li>Module 4: Apache Hive</li>
+                <li>Module 5: Apache Spark</li>
+                <li>Module 6: Data Ingestion Tools</li>
+                <li>Module 7: Data Analytics Techniques</li>
+                <li>Module 8: Data Visualization</li>
+                <li>Module 9: Introduction to Machine Learning</li>
+                <li>Module 10: Real-World Big Data Applications</li>
+                <li>Module 11: Capstone Project</li>
+                <li>Module 12: Career Preparation</li>
+            </ul>
+        </section>
+        <section class="download-section">
+            <button id="download-btn">Download PDF</button>
+            <p id="status"></p>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function () {
+            const pdfUrl = "/static/images/bigdata.pdf"; // Replace with your actual PDF file path
+
+            if (pdfUrl) {
+                const link = document.createElement("a");
+                link.href = pdfUrl;
+                link.download = "bigdata.pdf"; // File name for the download
+                link.click();
+            } else {
+                const status = document.getElementById("status");
+                status.textContent = "PDF not available. Please find the course modules above.";
+                status.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
