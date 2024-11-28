@@ -27,81 +27,17 @@
     <link rel="preload" as="image" href="/skillupbharat/static/images/hero-shape-2.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+
+
+    
+    
 </head>
 <body>
-    <header class="header" data-header>
-        <div class="container">
+   <div id="header-placeholder"></div>
     
-          <a href="#" class="logo">
-            <img src="/static/images/Skillup logo.jpg" width="162" height="50" alt="SkillUp Bharat logo">
-          </a>
-    
-          <nav class="navbar" data-navbar>
-    
-            <div class="wrapper">
-              <a href="#" class="logo">
-                <img src="/static/images/Skillup logo.jpg" width="162" height="50" alt="SkillUp Bharat logo">
-              </a>
-    
-              <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-              </button>
-            </div>
-    
-            <ul class="navbar-list">
-    
-              <li class="navbar-item">
-                <a href="#home"  class="navbar-link" data-nav-link>Home</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#about" class="navbar-link" data-nav-link>About</a>
-              </li>
-    
-              <li class="navbar-item">
-                <a href="#courses" class="navbar-link" data-nav-link>Courses</a>
-              </li>
-    
-              <!-- <li class="navbar-item">
-                <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-              </li> -->
-    
-              <li class="navbar-item">
-                <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-              </li>
-    
-            </ul>
-    
-          </nav>
-    
-          <div class="header-actions">
-    
-            <button class="header-action-btn" aria-label="toggle search" title="Search">
-              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-            </button>
-    
-            <!-- <button class="header-action-btn" aria-label="cart" title="Cart">
-              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-    
-              <span class="btn-badge">0</span>
-            </button> -->
-    
-            <!-- <a href="#" class="btn has-before">
-              <span class="span">Try for free</span>
-    
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </a> -->
-    
-            <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
-              <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-            </button>
-    
-          </div>
-    
-          <div class="overlay" data-nav-toggler data-overlay></div>
-    
-        </div>
-      </header>
 
 
 
@@ -168,7 +104,7 @@
     
                 </div>
                 <div class="single-service">
-                    <img src="/static/images/cloud.jpg">
+                    <img src="/static/images/Cloudd.jpg">
                     <div class="overlay"></div>
                     <div class="service-desc">
                         <h3>Cloud Computing</h3>
@@ -195,7 +131,7 @@
                 </div>
                 </div>
                 <div class="single-service">
-                    <img src="/static/images/automation.jpg">
+                    <img src="/static/images/auto.jpg">
                     <div class="overlay"></div>
                     <div class="service-desc">
                         <h3>Automation Testing</h3>
@@ -222,7 +158,7 @@
                 </div>
             </div>
             <div class="single-service">
-              <img src="/static/images/bigdata.jpg">
+              <img src="/static/images/bigdataanalytics.jpg">
               <div class="overlay"></div>
               <div class="service-desc">
                   <h3>Big Data Analytics</h3>
@@ -232,6 +168,7 @@
           </div>
                 </div>
         </section>
+        <br>
 
           <!-- About us -->
           <section class="section about" id="about" aria-label="about">
@@ -573,6 +510,8 @@
                 </div>
             </div>
         </section>
+        <br>
+        
         
 
            <!-- Testimonials Ends here -->
@@ -583,24 +522,33 @@
       -->
 
      
-        <section class="video has-bg-image" aria-label="video"
-        style="background-image: url('/static/images/video-bg.png')">
-        <div class="container">
-         
+      <section class="video has-bg-image" aria-label="video"
+      style="background-image: url('/static/images/video-bg.png')">
+      <div class="container">
 
         <div class="video-card">
 
           <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
             <a href="/static/videos/vedio.mp4" target="_blank">
-              <img src="/static/images/video-bg.png" width="970" height="550" loading="lazy" alt="video" class="img-cover">
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
-              </button>
-            </a>
+
+            <img src="/static/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="video"
+              class="img-cover">
+
+            <button class="play-btn" aria-label="play video">
+              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            </button>
           </div>
+
+          <img src="/static/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+            class="shape video-shape-1">
+
+          <img src="/static/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+            class="shape video-shape-2">
+
+        </div>
+
       </div>
     </section>
-         
          
   
         </div>
@@ -630,7 +578,7 @@
 
             <li>
               <div class="stats-card" style="--color: 351, 83%, 61%">
-                <h3 class="card-title">32.4K</h3>
+                <h3 class="card-title">22.4K</h3>
 
                 <p class="card-text">Class Completed</p>
               </div>
@@ -646,7 +594,7 @@
 
             <li>
               <div class="stats-card" style="--color: 42, 94%, 55%">
-                <h3 class="card-title">354+</h3>
+                <h3 class="card-title">150+</h3>
 
                 <p class="card-text">Top Instructors</p>
               </div>
@@ -753,173 +701,7 @@
     - #FOOTER
   -->
 
-  <footer class="footer" style="background-image: url('/skillupbharat/static/images/footer-bg.png')">
-
-    <div class="footer-top section">
-      <div class="container grid-list">
-
-        <div class="footer-brand">
-
-          <a href="#" class="logo">
-            <img src="/static/images/Skillup logo.jpg" width="162" height="50" alt="SkillUp Bharat Logo">
-          </a>
-
-          <p class="footer-brand-text">
-            Best Training Academy Institute in Bengaluru.
-          </p>
-
-          <div class="wrapper">
-            <span class="span">Address:</span>    
-
-            <address class="address">Jayanagar 9th Block East End Circle near Jaydeva Hospital Bengaluru 560041</address>
-          </div>
-
-          <div class="wrapper">
-            <span class="span">Call:</span>
-
-            <a href="tel:+91 6361987951" class="footer-link">+91 6361987951</a>
-          </div>
-
-          <div class="wrapper">
-            <span class="span">Email:</span>
-
-            <a href="mailto:info@skillbharat.net" class="footer-link">info@skillbharat.net</a>
-          </div>
-
-        </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Online Platform</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">About</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Courses</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Instructor</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Events</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Instructor Profile</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Purchase Guide</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Links</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Gallery</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">News & Articles</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ's</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Sign In/Registration</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Coming Soon</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-list">
-
-          <p class="footer-list-title">Contacts</p>
-
-          <p class="footer-list-text">
-            Enter your email address to register to our newsletter subscription
-          </p>
-
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
-
-            <button type="submit" class="btn has-before">
-              <span class="span">Subscribe</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </form>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="https://m.facebook.com/SkillBharatam/" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.linkedin.com/groups/14552524" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.instagram.com/skillup.bharat?igsh=eWtmbGRyMTNjaW9n" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.youtube.com/@skillupbharat" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">SkillUp Bharat</a>
-        </p>
-
-      </div>
-    </div>
-
-  </footer>
+ 
 
 
 
@@ -929,7 +711,8 @@
       
     
 
-
+      <div id="footer-container"></div>
+      <script src="/static/scripts/script1.js"></script>
 
 
     <!-- custom js link -->
